@@ -8,7 +8,9 @@ import Facility from '../components/Facility';
 import Galeries from '../components/Galleries';
 import Advantage from '../components/Advantage';
 import Recentlyitem from '../components/RecentlyItem';
+
 export default function Home() {
+
 	return (
 		<>
 			<Hero>
