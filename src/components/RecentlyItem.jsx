@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import Booking1 from '../images/booking_1.jpg';
 import Booking2 from '../images/booking_2.jpg';
 import Booking3 from '../images/booking_3.jpg';
-
+import ListRooms from './ListRooms'
 class RecentlyItem extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: this.props.id,
+            image: this.props.image,
+            price: this.props.price,
+            categories: this.props.categories
+        }
+    }
     render() {
         return (
             < div className="booking" >
@@ -16,26 +25,25 @@ class RecentlyItem extends Component {
                             </div>
                             <div className="booking_slider_container">
                                 <div className="owl-carousel owl-theme booking_slider">
-
-                                    <div className="booking_item">
-                                        <img className="background_image" src={Booking1}></img>
-                                        <div className="booking_overlay trans_200"></div>
-                                        <div className="booking_price">$120/Night</div>
-                                        <div className="booking_link"><a href="">Family Room</a></div>
-                                    </div>
-                                    <div className="booking_item">
-                                        <img className="background_image" src={Booking2}></img>
-                                        <div className="booking_overlay trans_200"></div>
-                                        <div className="booking_price">$120/Night</div>
-                                        <div className="booking_link"><a href="">Deluxe Room</a></div>
-                                    </div>
-                                    <div className="booking_item">
-                                        <img className="background_image" src={Booking3}></img>
-                                        <div className="booking_overlay trans_200"></div>
-                                        <div className="booking_price">$120/Night</div>
-                                        <div className="booking_link"><a href="">Single Room</a></div>
-                                    </div>
-
+                                    
+                                <ListRooms
+                                     id = "1"
+                                     price = "$150"
+                                     image = {Booking1}
+                                     categories = "Single Room"
+                                />
+                                 <ListRooms
+                                     id = "2"
+                                     price = "$250"
+                                     image = {Booking2}
+                                     categories = "Family Room"
+                                />
+                                 <ListRooms
+                                     id = "3"
+                                     price = "$450"
+                                     image = {Booking3}
+                                     categories = "Deluxe Room"
+                                />
                                 </div>
                             </div>
                         </div>

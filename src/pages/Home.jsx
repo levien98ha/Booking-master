@@ -8,6 +8,7 @@ import Facility from '../components/Facility';
 import Galeries from '../components/Galleries';
 import Advantage from '../components/Advantage';
 import Recentlyitem from '../components/RecentlyItem';
+import ProductNew from '../components/ProductNew'
 
 export default function Home() {
 
@@ -17,8 +18,8 @@ export default function Home() {
 				<Banner
 					title="Luxstay Room Vip "
 					subtitle="This is room vip for everyone with $100 starting one day">
-					<Link to="/rooms" className="btn-primary">
-						our rooms
+					<Link to="/" className="btn-primary">
+						Get Started
                     </Link>
 				</Banner>
 			</Hero>
@@ -27,6 +28,7 @@ export default function Home() {
 			<Recentlyitem />
 			<Advantage />
 			<Service />
+			{/* <ProductNew/> */}
 			<Footer />
 		</>
 	)

@@ -1,6 +1,4 @@
-import {combinReducers} from 'react-redux';
-import cart from './cart';
-const rootReducer = combinReducers({
-    cart
+import {combineReducers} from 'redux';
+const rootReducer = combineReducers({
 });
 export default rootReducer;
