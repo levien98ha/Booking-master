@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
@@ -15,7 +15,60 @@ const booking_list = {
 }
 
 
-const Rooms = () => {
+class Rooms extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            product: [
+                {
+                    id: '1',
+                    price: "$150",
+                    image: Booking1,
+                    categories: "Single Room"
+                },
+                {
+                    id: '2',
+                    price: "$150",
+                    image: Booking2,
+                    categories: "Single Room"
+                },
+                {
+                    id: '3',
+                    price: "$150",
+                    image: Booking3,
+                    categories: "Single Room"
+                },  {
+                    id: '4',
+                    price: "$150",
+                    image: Booking1,
+                    categories: "Single Room"
+                },
+                {
+                    id: '5',
+                    price: "$150",
+                    image: Booking2,
+                    categories: "Single Room"
+                },
+                {
+                    id: '6',
+                    price: "$150",
+                    image: Booking3,
+                    categories: "Single Room"
+                }
+            ]
+        }
+    }
+    
+    render(){
+        var listproduct =
+           this.state.product.map(item => (
+                <ListRooms id = {item.id}
+                           price = {item.price}
+                           image = {item.image}
+                           categories = {item.categories}
+                />
+                ));
+        
     return (
         <>
             <Hero hero="roomsHero">
@@ -31,42 +84,7 @@ const Rooms = () => {
                     <div className="col">
                         <div className="booking_slider_container">
                             <div className="owl-carousel owl-theme booking_slider">
-                                <ListRooms
-                                     id = "1"
-                                     price = "$150"
-                                     image = {Booking1}
-                                     categories = "Single Room"
-                                />
-                                 <ListRooms
-                                     id = "2"
-                                     price = "$250"
-                                     image = {Booking2}
-                                     categories = "Family Room"
-                                />
-                                 <ListRooms
-                                     id = "3"
-                                     price = "$450"
-                                     image = {Booking3}
-                                     categories = "Deluxe Room"
-                                />
-                                <ListRooms
-                                     id = "4"
-                                     price = "$150"
-                                     image = {Booking1}
-                                     categories = "Single Room"
-                                />
-                                 <ListRooms
-                                     id = "5"
-                                     price = "$250"
-                                     image = {Booking2}
-                                     categories = "Family Room"
-                                />
-                                 <ListRooms
-                                     id = "6"
-                                     price = "$450"
-                                     image = {Booking3}
-                                     categories = "Deluxe Room"
-                                />
+                                {listproduct}
                             </div>
                         </div>
                     </div>
@@ -76,6 +94,6 @@ const Rooms = () => {
             <Footer />
         </>
     )
-}
+}}
 
 export default Rooms;

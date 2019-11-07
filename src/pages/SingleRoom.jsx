@@ -9,6 +9,19 @@ import Details from '../components/DetailsRoom';
 import Booking3 from '../images/booking_3.jpg';
 
 class SingleRoom extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            id: this.state.id,
+            name: this.state.name,
+            price: this.state.price,
+            image: [],
+            categories: this.state.categories,
+            service: this.state.service,
+            decription: this.state.decription,
+            startDays: this.state.startDays
+        }
+    }
     render() {
         return (
             <>

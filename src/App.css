@@ -511,7 +511,7 @@ slider>* {
     overflow: hidden;
 }
 
-slide:nth-child(1) {
+.heroSlide:nth-child(1) {
     left: 0%;
     animation-delay: -1s;
     background-image: url("./images/4.jpg");
@@ -519,21 +519,21 @@ slide:nth-child(1) {
     background-position: center;
 }
 
-slide:nth-child(2) {
+.heroSlide:nth-child(2) {
     animation-delay: 2s;
     background-image: url("./images/2.jpg");
     background-size: cover;
     background-position: center;
 }
 
-slide:nth-child(3) {
+.heroSlide:nth-child(3) {
     animation-delay: 5s;
     background-image: url("./images/3.jpg");
     background-size: cover;
     background-position: center;
 }
 
-slide:nth-child(4) {
+.heroSlide:nth-child(4) {
     left: 0%;
     animation-delay: 8s;
     background-image: url("./images/1.jpg");
@@ -541,7 +541,7 @@ slide:nth-child(4) {
     background-position: center;
 }
 
-slide p {
+.heroSlide p {
     font-family: Comfortaa;
     font-size: 70px;
     text-align: center;
@@ -1177,9 +1177,76 @@ li:last-child,
     text-align: center;
 }
 
-.imgDetails {
-    width: 50em;
-    height: 46em;
+.imgDetails>* {
+    position: absolute;
+    display: block;
+    width: '50em';
+    height: '46em';
+    background: #1f1f1f;
+    animation: slide1 12s infinite;
+    overflow: hidden;
+}
+
+.slideDetails {
+    width: '50em';
+    height: '46rem';
+}
+
+.slideDetails:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+    background-position: center;
+    background-size: cover;
+    width: '50em';
+    height: '46rem';
+}
+
+.slideDetails:nth-child(2) {
+    animation-delay: 2s;
+    background-position: center;
+    background-size: cover;
+    width: '50em';
+    height: '46rem';
+}
+
+.slideDetails:nth-child(3) {
+    animation-delay: 5s;
+    background-position: center;
+    background-size: cover;
+    width: '50em';
+    height: '46rem';
+}
+
+.slideDetails:nth-child(4) {
+    left: 0%;
+    animation-delay: 8s;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes slide1 {
+    0% {
+        left: 100%;
+        width: 100%;
+    }
+    5% {
+        left: 0%;
+    }
+    25% {
+        left: 0%;
+    }
+    30% {
+        left: -100%;
+        width: 100%;
+    }
+    30.0001% {
+        left: -100%;
+        width: 0%;
+    }
+    100% {
+        left: 100%;
+        width: 0%;
+    }
 }
 
 .title_details {
