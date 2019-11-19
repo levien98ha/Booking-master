@@ -9,6 +9,8 @@ import Booking1 from '../images/booking_1.jpg';
 import Booking2 from '../images/booking_2.jpg';
 import Booking3 from '../images/booking_3.jpg';
 import Pagination from '../components/Pagination';
+import { connect } from 'react-redux';
+import {Route} from 'react-router-dom'
 const booking_list = {
     textAlign: 'center',
     marginBottom: '2em'
@@ -17,58 +19,19 @@ const booking_list = {
 
 class Rooms extends Component {
     constructor(props){
-        super(props);
-        this.state = {
-            product: [
-                {
-                    id: '1',
-                    price: "$150",
-                    image: Booking1,
-                    categories: "Single Room"
-                },
-                {
-                    id: '2',
-                    price: "$150",
-                    image: Booking2,
-                    categories: "Single Room"
-                },
-                {
-                    id: '3',
-                    price: "$150",
-                    image: Booking3,
-                    categories: "Single Room"
-                },  {
-                    id: '4',
-                    price: "$150",
-                    image: Booking1,
-                    categories: "Single Room"
-                },
-                {
-                    id: '5',
-                    price: "$150",
-                    image: Booking2,
-                    categories: "Single Room"
-                },
-                {
-                    id: '6',
-                    price: "$150",
-                    image: Booking3,
-                    categories: "Single Room"
-                }
-            ]
-        }
+    super(props);
     }
     
     render(){
         var listproduct =
-           this.state.product.map(item => (
+           this.props.posts.map(item => (
                 <ListRooms id = {item.id}
                            price = {item.price}
                            image = {item.image}
                            categories = {item.categories}
+                           path = {item.id}
                 />
                 ));
-        
     return (
         <>
             <Hero hero="roomsHero">
@@ -84,7 +47,10 @@ class Rooms extends Component {
                     <div className="col">
                         <div className="booking_slider_container">
                             <div className="owl-carousel owl-theme booking_slider">
-                                {listproduct}
+                              {listproduct} 
+                              <Route exact path="/rooms/:id" render={({match}) => (
+                                  <listproduct post={this.props.posts.find(p => p.id === match.params.id)} />
+                                )} />
                             </div>
                         </div>
                     </div>
@@ -96,4 +62,9 @@ class Rooms extends Component {
     )
 }}
 
-export default Rooms;
+const mapStateToPros = (state) => {
+    const {posts} = state;
+    return {posts}
+}
+
+export default connect(mapStateToPros)(Rooms);

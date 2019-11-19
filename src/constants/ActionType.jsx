@@ -1,0 +1,4 @@
+export const ActionTypes = {
+    SHOW_SINGLE_PRODUCT: 'SHOW_SINGLE_PRODUCT',
+    SET_TIME_ROOM: 'SET_TIME_ROOM'
+  }
