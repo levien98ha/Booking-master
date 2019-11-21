@@ -5,9 +5,6 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Search from '../components/SearchBox';
 import ListRooms from '../components/ListRooms';
-import Booking1 from '../images/booking_1.jpg';
-import Booking2 from '../images/booking_2.jpg';
-import Booking3 from '../images/booking_3.jpg';
 import Pagination from '../components/Pagination';
 import { connect } from 'react-redux';
 import {Route} from 'react-router-dom'
@@ -18,10 +15,7 @@ const booking_list = {
 
 
 class Rooms extends Component {
-    constructor(props){
-    super(props);
-    }
-    
+
     render(){
         var listproduct =
            this.props.posts.map(item => (

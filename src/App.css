@@ -1364,3 +1364,37 @@ textarea {
     bottom: 0;
     transition: 0.5s ease;
 }
+
+
+/* tab admin */
+
+.adminTabPage {
+    margin-top: 4em;
+}
+
+.tab-list {
+    border-bottom: 0.1em solid #ccc;
+    padding-left: 1rem;
+}
+
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+    background-color: white;
+    border: solid #ccc;
+    border-width: 0.1em 0.1em 0 0.1em;
+}
+
+.delAdmin {
+    margin-right: 1rem;
+}
+
+.AdminRooms {
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}

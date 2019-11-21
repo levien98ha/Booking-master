@@ -1,4 +1,4 @@
-import ActionTypes from '../constants/ActionType'
+import {ActionTypes} from '../constants/ActionType';
 
 export function showSingleProduct(singleProduct) {
     return {

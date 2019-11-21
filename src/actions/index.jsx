@@ -1,5 +1,5 @@
-import {showAllProduct} from './showSingleProducts';
+import {showSingleProduct} from './showSingleProducts';
 
 export {
-    showAllProduct
+    showSingleProduct
 };
