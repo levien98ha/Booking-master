@@ -2,15 +2,19 @@ import Booking1 from '../images/booking_1.jpg';
 import Booking2 from '../images/booking_2.jpg';
 import Booking3 from '../images/booking_3.jpg';
 import { showSingleProduct } from '../actions';
+import { bookingRooms } from '../actions';
 const initState = {
     posts: [ {
-                    id: '1',
+                    id: "1",
                     price: "$150",
                     image: Booking1,
                     categories: "Single Room",
                     name: "Room Luxury 1",
                     service: "- Wifi free ",
-                    decription: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo."
+                    decription: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo.",
+                    userId: 1,
+                    bookingStart: '',
+                    bookingEnd: ''
                 },
                 {
                     id: '2',
@@ -60,11 +64,12 @@ const initState = {
 function rootReducer(state = initState, action){
     switch (action.type) {
         case showSingleProduct: {
-            return {
-                ...state
-            }
+            return [...state];
         }
-        default: return state;
+        case bookingRooms:{
+            return [...state];
+        }
+        default: return state
     }
 }
 export default rootReducer;

@@ -20,6 +20,7 @@ class EditableCell extends React.Component {
     }
     return <Input />;
   };
+
   save = e => {
     const { record, handleSave } = this.props;
     this.form.validateFields((error, values) => {
@@ -30,9 +31,10 @@ class EditableCell extends React.Component {
       handleSave({ ...record, ...values });
     });
   };
-  renderCell = ({ getFieldDecorator }) => {
+  renderCell = form => {
+    this.form = form;
     const {
-      editing,
+      editing ,
       dataIndex,
       title,
       inputType,
@@ -45,7 +47,7 @@ class EditableCell extends React.Component {
       <td {...restProps}>
         {editing ? (
           <Form.Item style={{ margin: 0 }}>
-            {getFieldDecorator(dataIndex, {
+            {form.getFieldDecorator(dataIndex, {
               rules: [
                 {
                   required: true,
@@ -56,7 +58,7 @@ class EditableCell extends React.Component {
             })(this.getInput())}
           </Form.Item>
         ) : (
-          children
+          <div>{children}</div>
         )}
       </td>
     );
@@ -69,6 +71,12 @@ class EditableCell extends React.Component {
 
 
 class EditableTable extends React.Component {
+  // componentWillMount () {
+  //   console.log(this.props.posts);
+  // }
+  // componentDidMount () {
+  //   console.log(this.props.posts);
+  // }
     constructor(props) {
       super(props);
       this.state = { data: this.props.posts, editingKey: '' };
@@ -119,10 +127,7 @@ class EditableTable extends React.Component {
               <span>
                 <EditableContext.Consumer>
                   {form => (
-                    <a
-                      onClick={() => this.save(form, record.key)}
-                      style={{ marginRight: 8 }}
-                    >
+                    <a onClick={() => this.save(form, record.key)} style={{ marginRight: 8 }}>
                       Save
                     </a>
                   )}
@@ -136,6 +141,9 @@ class EditableTable extends React.Component {
               <a disabled={editingKey !== ''} onClick={() => this.edit(record.key)}>
                 Edit
               </a>
+              {/* <a disabled={editingKey !== ''} onClick={() => this.edit(record.key)}>
+                Delete
+              </a> */}
                 {/* <Popconfirm title="Sure to delete?" onConfirm={() => this.handleDelete(record.key)}>
                   <a>Delete</a>
                 </Popconfirm> */}
@@ -143,37 +151,43 @@ class EditableTable extends React.Component {
             )
           },
         },
+        {
+          title: 'Action',
+          dataIndex: 'operation',
+            render: (text, record) =>
+          this.state.data.length >= 1 ? (
+            <Popconfirm
+              title="Sure to delete?"
+              onConfirm={() => this.handleDelete(record.key)}
+            >
+              <a>Delete</a>
+            </Popconfirm>
+          ) : null
+          }
       ];
     }
   
     isEditing = record => record.key === this.state.editingKey;
 
     handleDelete = key => {
-        const data = [...this.state.data];
-        this.setState({ data: data.filter(item => item.id !== key) });
+      console.log(key);
+        const dataSource = [...this.state.data];
+        this.setState({ data: dataSource.filter(item => item.key !== key) });
       };
-      handleSave = row => {
-        const newData = [...this.state.data];
-        const index = newData.findIndex(item => row.key === item.id);
-        const item = newData[index];
-        newData.splice(index, 1, {
-          ...item,
-          ...row,
-        });
-        this.setState({ data: newData });
-      };
-
+    
     cancel = () => {
       this.setState({ editingKey: '' });
     };
   
+
     save(form, key) {
       form.validateFields((error, row) => {
         if (error) {
           return;
         }
         const newData = [...this.state.data];
-        const index = newData.findIndex(item => key === item.id);
+        console.log(newData);
+        const index = newData.findIndex(item => key === item.key);
         if (index > -1) {
           const item = newData[index];
           newData.splice(index, 1, {
@@ -186,14 +200,16 @@ class EditableTable extends React.Component {
           this.setState({ data: newData, editingKey: '' });
         }
       });
+      
     }
   
     edit(key) {
       this.setState({ editingKey: key });
     }
   
+  
     render() {
-        const { data } = this.state;
+      const { data } = this.state;
       const components = {
         body: {
          row: EditableFormRow,
@@ -212,8 +228,6 @@ class EditableTable extends React.Component {
             inputType: col.dataIndex ,
             dataIndex: col.dataIndex,
             editable: col.editable,
-            // dataIndex: col.dataIndex,
-            // handleSave: this.handleSave,
             title: col.title,
             editing: this.isEditing(record),
           }),
@@ -227,7 +241,7 @@ class EditableTable extends React.Component {
             bordered
             dataSource={this.state.data}
             columns={columns}
-            rowClassName="editable-row"
+            rowClassName={() => "editable-row"}
             pagination={{
               onChange: this.cancel,
             }}
@@ -250,43 +264,43 @@ class EditableTable extends React.Component {
 //     );}
 // }
 
-const columns = [
-    {
-      title: 'Name Room',
-      dataIndex: 'name',
-      key: 'name'
-    },
-    {
-      title: 'Price',
-      dataIndex: 'price',
-      key: 'price',
-    },
-    {
-      title: 'Image',
-      dataIndex: 'image',
-      key: 'image',
-    },
-    {
-      title: 'Service',
-      key: 'service',
-      dataIndex: 'service'
-    },
-    {
-        title: 'Decription',
-        key: 'decription',
-        dataIndex: 'decription'
-      },
-    {
-      title: 'Action',
-      key: 'action',
-      render: (text, record) => (
-        <span>
-          <a className='delAdmin'>Delete</a>
-          <a className='editAdmin'>Edit</a>
-        </span>
-      ),
-    },
-  ];
+// const columns = [
+//     {
+//       title: 'Name Room',
+//       dataIndex: 'name',
+//       key: 'name'
+//     },
+//     {
+//       title: 'Price',
+//       dataIndex: 'price',
+//       key: 'price',
+//     },
+//     {
+//       title: 'Image',
+//       dataIndex: 'image',
+//       key: 'image',
+//     },
+//     {
+//       title: 'Service',
+//       key: 'service',
+//       dataIndex: 'service'
+//     },
+//     {
+//         title: 'Decription',
+//         key: 'decription',
+//         dataIndex: 'decription'
+//       },
+//     {
+//       title: 'Action',
+//       key: 'action',
+//       render: (text, record) => (
+//         <span>
+//            {/* <a className='delAdmin'>Delete</a>  */}
+//           <a className='editAdmin'>Edit</a>
+//         </span>
+//       ),
+//     },
+//   ];
 
 const mapStateToPros = (state) => {
     const {posts} = state;

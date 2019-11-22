@@ -6,37 +6,56 @@ import Details1 from '../images/details-1.jpeg';
 import Details2 from '../images/details-2.jpeg';
 import Details3 from '../images/details-3.jpeg';
 import Details4 from '../images/details-4.jpeg';
-
-const DateTimePicker = () => {
-    const [startDate, setStartDate] = useState(null);
-
+import { connect } from 'react-redux';
+import DateTimePicker from './DatePicker'
+// var [startDay1, endDay1] = [];
+const DateTimePicker1 = () => {
+    const [startDate, setStartDate] = useState(new Date());
     return (
         <DatePicker
             selected={startDate}
-            onChange={date => setStartDate(date)}
+            onChange={date => {setStartDate(date); console.log(startDate)}}
             timeInputLabel="Time:"
-            dateFormat="MM/dd/yyyy h:mm aa"
+            dateFormat="dd/MM/yyyy h:mm aa"
+            showTimeInput
+            minDate={new Date()}
+            inline
+        />
+    );
+   // console.log(startDate);
+};
+const DateTimePicker2 = () => {
+    const [endDate, setEndDate] = useState(new Date());
+    return (
+        <DatePicker
+            selected={endDate}
+            onChange={date => {setEndDate(date); console.log(endDate)}}
+            timeInputLabel="Time:"
+            dateFormat="dd/MM/yyyy h:mm aa"
             showTimeInput
             minDate={new Date()}
             inline
         />
     );
 };
-
 const blockDiv = {
     width: '2rem'
 }
 const style1 = {
-    backgroundImage: `url(${Details1})`
+    backgroundImage: `url(${Details1})`,
+    width: '20em'
 }
 const style2 = {
-    backgroundImage: `url(${Details2})`
+    backgroundImage: `url(${Details2})`,
+    width: '20em'
 }
 const style3 = {
-    backgroundImage: `url(${Details3})`
+    backgroundImage: `url(${Details3})`,
+    width: '20em'
 }
 const style4 = {
-    backgroundImage: `url(${Details4})`
+    backgroundImage: `url(${Details4})`,
+    width: '20em'
 }
 class Details extends Component {
     constructor(props) {
@@ -48,13 +67,42 @@ class Details extends Component {
             price: this.props.price,
             categories: this.props.categories,
             decription: this.props.decription,
-            startDays: this.props.startDays
+            startDays: this.props.startDays,
+            endDays: this.props.endDays,
+            startDate: new Date(),
+            endDate: new Date()
+            
         }
+        console.log(this.state.name);
+       console.log(this.state.price);
+       console.log(this.state.id)
     }
+    // componentDidMount
+    onChangeStartDays = (date) => {
+        this.setState({
+            startDate: date
+        })
+        console.log(this.state.startDate)
+    }
+    onChangeEndDays = (date) => {
+        this.setState({
+            endDate: date
+        })
+        console.log(this.state.endDate)
+    }
+    handleSelect = (date) => {
+     //   console.log(this.state.startDate)
+    }
+    // receiveStartDateSurvey = (startdate) => {
+    //     this.setState({
+    //         startdate: startdate,
+    //     })
+    //     console.log(this.state.startDate)
+    // }
 
     render() {
         return (
-            <div className="details">
+            <div className="details" id={this.state.id}>
                 <h2 className="title_details">{this.state.name}</h2>
                 <div className="dateOfRoom">
                     {/* <img className="imgDetails" src={this.state.image}></img> */}
@@ -78,18 +126,45 @@ class Details extends Component {
                     <div className="check_date">
                         <div className="check_in">
                             <p className="startDateBook">Check-in Date</p>
-                            <DateTimePicker className="DateTimePicker" />
+                            {/* <DateTimePicker
+										sendDate={this.receiveStartDateSurvey}
+										placeholder='Start Time Survey'
+										value={this.state.startdate}										
+									/> */}
+                            {/* <DateTimePicker1 className="DateTimePicker"/> */}
+                            <DatePicker
+            selected={this.state.startDate}
+            onChange={this.onChangeStartDays}
+            //value={this.state.date1}
+            onSelect={this.handleSelect} 
+            timeInputLabel="Time:"
+            dateFormat="dd/MM/yyyy h:mm aa"
+            showTimeInput
+            minDate={new Date()}
+            inline
+        />
                         </div>
                         <div style={blockDiv}></div>
                         <div className="check-out">
                             <p className="endDateBook">Check-out Date</p>
-                            <DateTimePicker className="DateTimePicker" />
+                            {/* <DateTimePicker2 className="DateTimePicker" /> */}
+                            <DatePicker
+            selected={this.state.endDate}
+            onChange={this.onChangeEndDays}
+            //value={this.state.date1}
+            onSelect={this.handleSelect} 
+            timeInputLabel="Time:"
+            dateFormat="dd/MM/yyyy h:mm aa"
+            showTimeInput
+            minDate={new Date()}
+            inline
+        />
                         </div>
                         <div style={blockDiv}></div>
                         <div class="form-group green-border-focus">
                             <label className="label_required" for="exampleFormControlTextarea5">Your Requiredment:</label>
                             <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
-                            <input type="button" value="SUBMIT" className="book_submit"></input>
+                            <input type="button" value="SUBMIT" className="book_submit" onClick={this.onAddBooking}></input>
                         </div>
                     </div>
 
@@ -97,6 +172,20 @@ class Details extends Component {
             </div>
         );
     }
-};
 
-export default Details;
+    onAddBooking = () => {
+       //console.log(startDay1);
+    //    console.log(this.state.name);
+    //    console.log(this.state.price);
+    //    console.log(this.state.id)
+       }       
+};
+const dataBooking = [];
+
+
+const mapStateToPros = (state) => {
+    const {posts} = state;
+    return {posts}
+}
+
+export default connect()(Details);

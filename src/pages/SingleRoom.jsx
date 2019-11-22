@@ -11,6 +11,7 @@ class SingleRoom extends Component {
  
     render() {
         const post = this.props.post ? (<Details
+            id={this.props.post.id}
             image={this.props.post.image}
             name={this.props.post.name}
             price={this.props.post.price}
