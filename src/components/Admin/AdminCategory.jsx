@@ -73,22 +73,22 @@ class EditableCell extends React.Component {
 class EditableTable extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { data: this.props.users, editingKey: '' };
+      this.state = { data: this.props.categories, editingKey: '' };
       this.columns = [
         {
-          title: 'Email',
-          dataIndex: 'email',
+          title: 'ID Category',
+          dataIndex: 'id',
           width: '35%',
           editable: true,
-          sorter: (a, b) => a.email.length - b.email.length,
-          sortDirections: ['descend'],
+          sorter: (a, b) => a.id - b.id,
+            sortDirections: ['descend'],
         },
         {
-            title: 'Password',
-            dataIndex: 'password',
+            title: 'Name',
+            dataIndex: 'name',
             width: '35%',
             editable: true,
-            sorter: (a, b) => a.password.length - b.password.length,
+            sorter: (a, b) => a.name.length - b.name.length,
             sortDirections: ['descend'],
           },
         {
@@ -225,12 +225,12 @@ class EditableTable extends React.Component {
     }
   }
   
-  const AdminUser = Form.create()(EditableTable);
+  const AdminCategory = Form.create()(EditableTable);
 
 
 const mapStateToPros = (state) => {
-    const {users} = state;
-    return {users}
+    const {categories} = state;
+    return {categories}
 }
 
-export default connect(mapStateToPros)(AdminUser);
+export default connect(mapStateToPros)(AdminCategory);

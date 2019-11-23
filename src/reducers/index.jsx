@@ -60,7 +60,75 @@ const initState = {
                     name: "Room Luxury 6",
                     service: "- Wifi free ",
                     decription: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo."
-                }] }
+                }],
+                users: [ {
+                    id: "1",
+                   email: "NguyenLeVien@gmail.com",
+                   password: "VienDepTrai"
+                },
+                {
+                    id: "2",
+                   email: "hoangtantruwongan@gmail.com",
+                   password: "AnAuYemUmHuongAnUi"
+                },
+                {
+                    id: "3",
+                   email: "LeXuanTan@gmail.com",
+                   password: "TanTuoiTanToTinhTuTiTon"
+                },
+                {
+                    id: "4",
+                   email: "NguyenCongMinh@gmail.com",
+                   password: "MinhNauAn"
+                },],
+                categories: [ {
+                    id: "1",
+                  name: "Vip Room"
+                },
+                {
+                    id: "2",
+                    name: "Family Room"
+                },
+                {
+                    id: "3",
+                    name: "Single Room"
+                },
+                {
+                    id: "4",
+                    name: "Luxury Room"
+                },
+                {
+                    id: "5",
+                  name: "Vip Room"
+                },
+                {
+                    id: "6",
+                    name: "Family Room"
+                },
+                {
+                    id: "7",
+                    name: "Single Room"
+                },
+                {
+                    id: "8",
+                    name: "Luxury Room"
+                },
+                {
+                    id: "9",
+                  name: "Vip Room"
+                },
+                {
+                    id: "10",
+                    name: "Family Room"
+                },
+                {
+                    id: "11",
+                    name: "Single Room"
+                },
+                {
+                    id: "12",
+                    name: "Luxury Room"
+                },] }
 function rootReducer(state = initState, action){
     switch (action.type) {
         case showSingleProduct: {
