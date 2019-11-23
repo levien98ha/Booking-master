@@ -6,11 +6,19 @@ import Details1 from '../images/details-1.jpeg';
 import Details2 from '../images/details-2.jpeg';
 import Details3 from '../images/details-3.jpeg';
 import Details4 from '../images/details-4.jpeg';
+<<<<<<< HEAD
 import { connect } from 'react-redux';
 import DateTimePicker from './DatePicker'
 // var [startDay1, endDay1] = [];
 const DateTimePicker1 = () => {
     const [startDate, setStartDate] = useState(new Date());
+=======
+import axios from 'axios';
+
+const DateTimePicker = () => {
+    const [startDate, setStartDate] = useState(null);
+
+>>>>>>> pull develop
     return (
         <DatePicker
             selected={startDate}
@@ -61,7 +69,9 @@ class Details extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            product:[],
             id: this.props.id,
+<<<<<<< HEAD
             name: this.props.name,
             image: this.props.image,
             price: this.props.price,
@@ -104,6 +114,36 @@ class Details extends Component {
         return (
             <div className="details" id={this.state.id}>
                 <h2 className="title_details">{this.state.name}</h2>
+=======
+        }
+        console.log(this.state.id);
+    }
+    componentDidMount() {
+        const id = this.state.id
+        axios({
+            method: 'GET',
+            url: `http://localhost:3000/rooms?id=${id}`,
+        })
+            .then(response => {
+                this.setState({
+                    product: response.data
+                })
+                console.log(this.state.product)
+            })
+            .catch(error => {
+                console.log(error);
+        })   
+        console.log(this.props.id);
+    }
+   
+
+    render() {
+        const {product} = this.state
+        var list = product.map(item => {
+            return (
+                <div className="details">
+                <h2 className="title_details">{item.name}</h2>
+>>>>>>> pull develop
                 <div className="dateOfRoom">
                     {/* <img className="imgDetails" src={this.state.image}></img> */}
                     <slider className='imgDetails'>
@@ -114,9 +154,8 @@ class Details extends Component {
                     </slider>
                     <div className="informations">
                         <ul className="info_details">
-                            <li className="info_details_list price">Price: <div className="infomation_details">{this.state.price}</div></li>
-                            <li className="info_details_list category">Category: <div className="infomation_details">{this.state.categories}</div></li>
-                            <li className="info_details_list decription">Decription: <div className="infomation_details">{this.state.decription}</div></li>
+                            <li className="info_details_list price">Price: <div className="infomation_details">{item.price}</div></li>
+                            <li className="info_details_list decription">Decription: <div className="infomation_details">{item.description}</div></li>
                         </ul>
 
                     </div>
@@ -170,6 +209,12 @@ class Details extends Component {
 
                 </div>
             </div>
+            );
+        })
+        return (
+            <>
+            { list }
+            </>
         );
     }
 

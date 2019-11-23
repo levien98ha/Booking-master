@@ -40,7 +40,7 @@ export default class Navbar extends Component {
                         <Link to="/about-us">About</Link>
                     </li>
                     <li>
-                        <Link to="/contacts">Contacts</Link>
+                        <Link to="/contact-us">Contacts</Link>
                     </li>
                 </ul>
                </div>

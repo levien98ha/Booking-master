@@ -34,7 +34,7 @@ export default class Service extends Component {
         return (
            <div className="service_tag">
                 <Title title="Service"/>
-                <img src={Images1}></img>
+                <img src={Images1} alt='service'></img>
            </div>
         )
     }

@@ -9,7 +9,12 @@ import Error from './pages/Error';
 import About from './pages/About';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
+<<<<<<< HEAD
 import { connect } from 'react-redux';
+=======
+import { connect } from 'tls';
+import Contact from './components/Contact';
+>>>>>>> pull develop
 
 class App extends Component {
   render(){
@@ -21,7 +26,11 @@ class App extends Component {
       <Route exact path = "/rooms" component={Rooms}/>
       <Route exact path = "/rooms/:id" component={SingleRoom} /> 
       <Route exact path = "/about-us" component={About}/>
+<<<<<<< HEAD
       <Route exact path = "/admin" component={Admin}/>
+=======
+      <Route exact path = "/contact-us" component={Contact}/>
+>>>>>>> pull develop
       <Route component={Error}/>
     </Switch>
     </Router>
