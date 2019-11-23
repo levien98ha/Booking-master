@@ -10,6 +10,7 @@ const categories = {
 class ListRooms extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             id: this.props.id,
             image: this.props.image,
@@ -17,6 +18,7 @@ class ListRooms extends Component {
             categories: this.props.categories,
             path: 'rooms/'+this.props.id
         }
+        console.log(this.props.id)
     }
 
     getID = (event) => {
