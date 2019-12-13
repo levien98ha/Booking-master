@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Search from '../components/SearchBox';
-import ListRooms from '../components/ListRooms';
+import ListRooms from '../components/ListRooms'
 import Pagination from '../components/Pagination';
-import { connect } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Route } from 'react-router-dom'
+
+// import firebase from "firebase";
+// import FileUploader from "react-firebase-file-uploader";
+
 const booking_list = {
     textAlign: 'center',
     marginBottom: '2em'
@@ -18,17 +21,6 @@ const booking_list = {
 
 
 class Rooms extends Component {
-<<<<<<< HEAD
-
-    render(){
-        var listproduct =
-           this.props.posts.map(item => (
-                <ListRooms id = {item.id}
-                           price = {item.price}
-                           image = {item.image}
-                           categories = {item.categories}
-                           path = {item.id}
-=======
     constructor(props) {
         super(props);
         this.state = {
@@ -98,18 +90,17 @@ class Rooms extends Component {
                 <ListRooms 
                     id={item.id}
                     price={item.price}
-                    image={Booking1}
+                    images={item.imagesURL}
                     categories={item.name}
-                    path={item.id}
->>>>>>> pull develop
+                    path={item.id}      
                 />
             ));
         return (
             <>
                 <Hero hero="roomsHero">
-                    <Banner title="Luxstay Room Vip" >
+                    <Banner title="Buy your Home" >
                             <Link to="/rooms" className="btn-primary">
-                                Our Rooms
+                                Buy Now
                             </Link>
                     </Banner>
                 </Hero>
@@ -133,9 +124,9 @@ class Rooms extends Component {
                             <div className="booking_slider_container">
                                 <div className="owl-carousel owl-theme booking_slider">
                                     {showProduct} 
-                                    {/* <Route exact path="/rooms/:id" render={({match}) => (
+                                    <Route exact path="/rooms/:id" render={({match}) => (
                                   <listproduct post={this.state.listProducts.find(p => p.id === match.params.id)} />
-                                )} /> */}
+                                )} />
                                     
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Title from './Title';
+import Title from './Title'
 import { FaCocktail, FaBeer} from 'react-icons/fa';
 
 export default class Service extends Component {
@@ -33,8 +33,8 @@ export default class Service extends Component {
     render() {
         return (
            <div>
+                {/* <Title title="Service"/>               */}
                 <Title title="Service"/>
-                
            </div>
         )
     }

@@ -102,7 +102,7 @@ class EditableTable extends React.Component {
           dataIndex: 'price',
           width: '10%',
           editable: true,
-          sorter: (a, b) => a.price.length - b.price.length,
+          sorter: (a, b) => a.price - b.price,
           sortDirections: ['descend'],
         },
         {

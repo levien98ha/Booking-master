@@ -1,0 +1,230 @@
+{
+    "users": [{
+            "id": 1,
+            "email": "an@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "email": "an1@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 3,
+            "email": "an123@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 4,
+            "email": "an318@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 5,
+            "email": "an1234@gmail.com",
+            "password": "123456"
+        },
+        {
+            "email": "abc@gmail.com",
+            "password": "123456",
+            "id": 6
+        },
+        {
+            "email": "an@gmail.com",
+            "password": "12345",
+            "id": 7
+        },
+        {
+            "email": "an@gmail.com",
+            "password": "123456",
+            "id": 8
+        },
+        {
+            "email": "an@gmail.com",
+            "password": "123456",
+            "id": 9
+        },
+        {
+            "email": "tan@gmail.com",
+            "password": "123456",
+            "id": 10
+        },
+        {
+            "email": "tan123@gmail.com",
+            "password": "123456",
+            "id": 11
+        },
+        {
+            "email": "vien@gmail.com",
+            "password": "123456",
+            "id": 12
+        },
+        {
+            "email": "vien123@gmail.com",
+            "password": "123456",
+            "id": 13
+        }
+    ],
+    "rooms": [{
+            "id": 1,
+            "name": "Apartment Blue",
+            "categoryId": 1,
+            "price": "$100",
+            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
+            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Ff862cf15-0b08-4697-add2-93e0d945f340.jpg?alt=media&token=3fe20dd8-a70e-4189-a956-831988ce2f5b",
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "userId": 1
+        },
+        {
+            "id": 2,
+            "price": "$123",
+            "name": "Rose Villa",
+            "categoryId": 3,
+            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
+            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fhome-real-estate-106399.jpg?alt=media&token=405fffaa-5722-40cf-ad75-65e2ed0b79f1",
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "userId": 1
+        },
+        {
+            "id": 3,
+            "price": "$500",
+            "name": "Smart house",
+            "categoryId": 2,
+            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
+            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-and-brown-concrete-building-2287310.jpg?alt=media&token=633b49e6-a0df-49df-99b6-07ffc0e8a319",
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "userId": 1
+        },
+        {
+            "id": 4,
+            "name": "TownHouse",
+            "categoryId": 5,
+            "price": "$1234",
+            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
+            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-concrete-3-storey-house-206172.jpg?alt=media&token=169402ac-06ab-4c54-bddc-38a857f13594",
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "userId": 1
+        },
+        {
+            "id": 5,
+            "name": "House DaNa",
+            "categoryId": 1,
+            "price": "$5000",
+            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
+            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fbrown-and-white-wooden-house-164558.jpg?alt=media&token=5deab6b1-eaa8-4904-826c-fa43bfde8dd6",
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "userId": 1
+        },
+        {
+            "id": 6,
+            "name": "Mint Villa",
+            "categoryId": 3,
+            "price": "$690",
+            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
+            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fmodern-building-against-blue-sky-323776.jpg?alt=media&token=9d09ef2a-5530-448a-b754-e73c76e4587d",
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "userId": 1
+        }
+    ],
+    "categories": [{
+            "id": 1,
+            "name": "Apartment"
+        },
+        {
+            "id": 2,
+            "name": "Commercial"
+        },
+        {
+            "id": 3,
+            "name": "House"
+        },
+        {
+            "id": 4,
+            "name": "Villa"
+        },
+        {
+            "id": 5,
+            "name": "TownHouse"
+        }
+    ],
+    "booking": [{
+            "id": 1,
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "users": [{
+                "Userid": 1
+            }],
+            "rooms": [{
+                    "Roomid": 1
+                },
+                {
+                    "Roomid": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "bookingStart": "10-10-2019",
+            "bookingEnd": "15-10-2019",
+            "users": [{
+                "Userid": 2
+            }],
+            "rooms": [{
+                    "Roomid": 4
+                },
+                {
+                    "Roomid": 3
+                }
+            ]
+        }
+    ],
+    "blogs": [{
+            "id": 1,
+            "date": "Decemer 15, 2019",
+            "title": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+            "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_2.jpg?alt=media&token=7e860e81-0a27-48eb-935e-dcd5a52ea06b",
+            "decription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.\nMolestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt!Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit.Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!"
+        },
+        {
+            "id": 2,
+            "date": "Decemer 14, 2019",
+            "title": "Chic Holiday DIY: Fragrant Herb Chandelier and Custom Treat Bags.",
+            "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_3.jpg?alt=media&token=60b89bc3-a314-4fb3-8a5f-974294d923cd",
+            "decription": "Holiday entertaining is all about one-of-a-kind decor, and we’ve got some show-stopping looks that you can make yourself. You don’t have to be an expert crafter to accomplish these easy DIY projects. Creating a custom hanging herb chandelier and dessert takeaways will really impress your guests at this year’s seasonal get-together.\n\nCreate a rustic vibe by wrapping the dining table in brown kraft paper. Arrange leaves, loaves of bread and open bottles of wine along the center of this setup. Lovely butter knives atop neatly placed cloth napkins seal the deal.\n\nServe tea or coffee with your homemade treat bags after the meal to brighten everyone’s day. Taking the little bit of time to make this thoughtful goody that your guests can break into right away or take home really makes visitors feel special. Taffy, cookies or a slice of pie are all great sweets to bag up for later."
+        },
+        {
+            "id": 3,
+            "date": "Decemer 13, 2019",
+            "title": "Enter If You Dare: Inside a Real-Life Haunted House.",
+            "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_4.jpg?alt=media&token=1c833e07-fb44-46bf-bdf7-390301ab56a7",
+            "decription": "If you make your home welcoming for children, you’ll ensure their parents have a great time as well.\n\nIf you happen to have kids that are the same ages as your young guests, you’re in luck. But if not, think about adding some considerate touches that will make parents more comfortable and alleviate kid boredom.\n\nHere are some ideas to get you started:\n\nTurn a spare room or an upstairs bedroom into a private nursing/changing area for a new mom.\nToddlers and younger children will want to be near their parents, so a good idea for them is to set up a corner of your living or dining room with toys, books, a tablet for watching cartoons and some comfy pillows or throws.\nOne of our favorite strategies for older kids is to turn the dessert course into an activity. For instance, you could bake a huge batch of sugar cookies in holiday shapes, and then put out different colors of icing to let kids (and adults) go to town with decorating their own cookies."
+        },
+        {
+            "id": 4,
+            "date": "Decemer 12, 2019",
+            "title": "Buying a Home? Plan for These Hidden Costs.",
+            "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_5.jpg?alt=media&token=62408717-5f14-45f5-a1ee-da7cf2753af1",
+            "decription": "Is that a ghost or just your imagination? See for yourself.\n\nWith no city lights for miles, The Pillars Estate stands alone in the darkest of nights.\n\nInside, guests are greeted by dim candlelight, a windy staircase and a gentleman from Scotland.\n\nTony McMurtrie purchased the Civil War-era estate in Albion, NY when it was ready to be torn down. Restoring it to its former glory over the past decade, he’s carefully curated every detail — from the grandfather clocks to the silver.\n\n“I don’t know where it comes from,” he explains. “I just like that time and that era.”"
+        },
+        {
+            "id": 5,
+            "date": "Decemer 11, 2019",
+            "title": "This Sky-High Water Tower Doubles as a Rustic Beach Retreat.",
+            "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_6.jpg?alt=media&token=52c6c081-b8d9-452b-b986-50b34ab65f95",
+            "decription": "The best way to prepare for the unknown and unexpected is through research and planning. This starts with budgeting before house hunting and throughout your search.\n\nLook at homes in your budget that need improvements, and then research how much those improvements could cost. Nothing is worse than buying a home thinking you can fix the yard for a few hundred dollars and then realizing it will cost thousands.\n\nThere’s really no limit to how prepared you can be. Say you find a nice home that’s priced lower than others in the area because of its age. You may save money on the list price, but with an older house, you could be slapped with a much higher home insurance payment, making the house more expensive in the long run."
+        },
+        {
+            "id": 6,
+            "date": "Decemer 10, 2019",
+            "title": "5 Easy Improvements to Get Your Home Guest-Ready for the Holidays.",
+            "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_7.jpg?alt=media&token=5ba9e55f-9fba-47a3-8230-55429b50cab3",
+            "decription": "In the 1940s, this Huntington Beach water tower — which stands at around 100 feet tall — serviced the local trains that came through town, connecting the inner city to the beach. Today, it’s a 3,500-square-foot high-rise with unmatched views of the Pacific Ocean, downtown Los Angeles and Catalina Island.\n\nThe historic and beloved water tower has long been a fixture of the Huntington coastline, but it was nearly torn down in the 1980s — until the local community pulled together and demanded it be saved.\n\n“There was a huge community outcry to keep it,” said Scott Ostlund, the owner of the water tower home. “People were selling quilts and having meetings on ‘Save Our Water Tower.’”"
+        }
+    ]
+}

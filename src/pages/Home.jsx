@@ -8,28 +8,29 @@ import Facility from '../components/Facility';
 import Galeries from '../components/Galleries';
 import Advantage from '../components/Advantage';
 import Recentlyitem from '../components/RecentlyItem';
-import ProductNew from '../components/ProductNew'
-
+import Customer from '../components/Customer'
+import CountUpFooter from '../components/CountUpFooter'
 export default function Home() {
 
 	return (
 		<>
 			<Hero>
-				<Banner
-					title="Luxstay Room Vip "
-					subtitle="This is room vip for everyone with $100 starting one day">
-					<Link to="/" className="btn-primary">
-						Get Started
-                    </Link>
-				</Banner>
-			</Hero>
-			<Facility />
+			    <Banner title="WELCOME TO NEO GROUP." >
+                    <Link to="/room" className="btn-primary">
+                                Get Started
+                     </Link>
+                </Banner>
+			</Hero>		
 			<Galeries />
 			<Recentlyitem />
-			<Advantage />
+			<Facility />
 			<Service />
-			{/* <ProductNew/> */}
+			<Advantage />
+			<Customer />
+			<CountUpFooter />
 			<Footer />
 		</>
 	)
 }
+
+// json-server --watch db.json

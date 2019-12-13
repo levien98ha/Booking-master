@@ -5,8 +5,8 @@ export default function Banner(props) {
     const {title, subtitle, children} = props;
     return (
         <div className="banner">
-            <p className="welcome">Welcome to Beach Resort</p>
-           <h1> { title} </h1>
+            <h1> { title} </h1>
+            <p className="welcome">Better Homes, Better Choices & Better Prices</p>
            <p>{subtitle}</p>
            {children}
         </div>

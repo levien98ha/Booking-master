@@ -21,7 +21,7 @@ export default class Navbar extends Component {
                <div className="nav-center">
                 <div className="nav-header">
                     <Link to="/">
-                        <img src={logo} alt="Booking"/>
+                        <p className="nav-title"> NEO Group. </p>
                     </Link>
                     <button 
                     className="nav-btn" 
@@ -34,7 +34,10 @@ export default class Navbar extends Component {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/rooms">Rooms</Link>
+                        <Link to="/rooms">Buy</Link>
+                    </li>
+                    <li>
+                        <Link to="/blogs">Blog</Link>
                     </li>
                     <li>
                         <Link to="/about-us">About</Link>

@@ -19,7 +19,7 @@ class Footer extends Component{
                    </ul>
                 </section>
                 <section className="section_main_menu">
-                   <h4 className="title">MAIN MENU</h4>
+                   <h4 className="title">Main Menu</h4>
                    <ul className="section_ul">
                        <Link to="/" className="link_menu menu1">HOME</Link><br/><br/>
                        <Link to="/rooms" className="link_menu menu2">BOOK NOW</Link><br/><br/>
@@ -29,27 +29,27 @@ class Footer extends Component{
                 </section>
 
                 <section className="section_to_do">
-                   <h4 className="title">THINGS TO DO</h4>
+                   <h4 className="title">Get Started</h4>
                    <ul className="section_ul">
-                       <Link to="/" className="link_to_do todo1">Wellness & Spa</Link><br/><br/>
-                       <Link to="/rooms" className="link_to_do todo2">Restaurants & Bars</Link><br/><br/>
-                       <Link to="/" className="link_to_do todo3">Excursions</Link><br/><br/>
-                       <Link to="/" className="link_to_do todo4">Events</Link><br/><br/>
+                       <Link to="/rooms" className="link_to_do todo1">Buy Now</Link><br/><br/>
+                       <Link to="/rooms" className="link_to_do todo2">Rent</Link><br/><br/>
+                       <Link to="/" className="link_to_do todo3">Payment</Link><br/><br/>
+                       <Link to="/" className="link_to_do todo4">Loan</Link><br/><br/>
                    </ul>
                 </section>
 
                 <section className="section_room">
-                   <h4 className="title">ROOMS AND SUITS</h4>
+                   <h4 className="title">Explore</h4>
                    <ul className="section_ul">
-                       <Link to="/" className="link_room linkroom1">Classic</Link><br/><br/>
-                       <Link to="/rooms" className="link_room linkroom2">Master</Link><br/><br/>
-                       <Link to="/" className="link_room linkroom3">Deluxe</Link><br/><br/>
-                       <Link to="/" className="link_room linkroom4">Superior</Link><br/><br/>
+                       <Link to="/" className="link_room linkroom1">Privacy</Link><br/><br/>
+                       <Link to="/rooms" className="link_room linkroom2">Policy</Link><br/><br/>
+                       <Link to="/" className="link_room linkroom3">FAQ</Link><br/><br/>
+                       <Link to="/" className="link_room linkroom4">Feature</Link><br/><br/>
                    </ul>
                 </section>
                 </div>
                 <hr />
-                <p className="design_by">Beach Resort design by Team 7. All Rights Reserved.</p>
+                <p className="design_by">NEO Group Real Estate design by Team 3. All Rights Reserved.</p>
             </div>
         );
     }

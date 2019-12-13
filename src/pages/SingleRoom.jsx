@@ -5,19 +5,45 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Search from '../components/SearchBox';
 import Details from '../components/DetailsRoom';
-import { connect } from 'react-redux';
+import axios from 'axios';
 
 class SingleRoom extends Component {
- 
+    constructor(props){
+        super(props);
+        this.state = {
+            post: [],
+            id: this.props.id
+        }
+    }
+    
+    componentDidMount() {
+        const id = this.state.id
+        axios({
+            method: 'GET',
+            url: `http://localhost:3000/rooms?id=${id}`,
+        })
+            .then(response => {
+                this.setState({
+                    post: response.data
+                })
+                console.log(this.state.product)
+            })
+            .catch(error => {
+                console.log(error);
+        })   
+        console.log(this.props.id);
+    }
+
     render() {
-        const post = this.props.post ? (<Details
-            id={this.props.post.id}
-            image={this.props.post.image}
-            name={this.props.post.name}
-            price={this.props.post.price}
-            categories={this.props.post.categories}
-            service={this.props.post.service}
-            decription={this.props.post.decription}
+        // let id = ownProps.match.params.id
+        const postDetails = this.state.post ? (<Details
+            id={this.state.post.id}
+            image={this.state.post.image}
+            name={this.state.post.name}
+            price={this.state.post.price}
+            categories={this.state.post.categories}
+            service={this.state.post.service}
+            decription={this.state.post.decription}
         />) : (<div>Loading........</div>)
         return (
             <>
@@ -28,20 +54,20 @@ class SingleRoom extends Component {
                 </Link>
                     </Banner>
                 </Hero>
-                {post}
+                {/* {postDetails} */}
+                <Details id={this.state.id}/>
                 <Footer />
             </>
         );
     }
 }
-const mapStateToProps = (state, ownProps) => {
-    let id = ownProps.match.params.id
-    return {
-        post: state.posts.find(post => post.id === id)
-    }
-}
-<<<<<<< HEAD
-export default connect(mapStateToProps)(SingleRoom);
-=======
-export default connect(mapStateToProps)(SingleRoom);
->>>>>>> pull develop
+// const mapStateToProps = (state, ownProps) => {
+//     let id = ownProps.match.params.id
+//     const posts = this.state.post;
+    
+
+//     return {
+//         post: state.posts.find(post => post.id === id)
+//     }
+// }
+export default SingleRoom;
