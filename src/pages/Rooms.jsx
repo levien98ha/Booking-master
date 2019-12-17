@@ -9,6 +9,7 @@ import ListRooms from '../components/ListRooms'
 import Pagination from '../components/Pagination';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button'
 import { Route } from 'react-router-dom'
 
 // import firebase from "firebase";
@@ -52,6 +53,7 @@ class Rooms extends Component {
                 this.setState({
                     categories: response.data
                 })
+                console.log(this.state.categories)
             })
             .catch(error => {
                 console.log(error);
@@ -81,7 +83,24 @@ class Rooms extends Component {
             })
 
     }
-   
+    handleReset = () => {
+        axios({
+            method: 'GET',
+            url: 'http://localhost:3000/rooms',
+        })
+            .then(response => {
+                this.setState({
+                    listProducts: response.data,
+                    categoryId: ''
+                })
+                console.log(this.state.listProducts)
+                
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+    }
     render() {
         const { categoryId, categories, listProducts,rooms } = this.state
         const showProduct =
@@ -104,12 +123,13 @@ class Rooms extends Component {
                             </Link>
                     </Banner>
                 </Hero>
+                <div className="search">
                 <TextField
                     select
                     value={categoryId}
-                    label="Filter"
+                    label="Filter Categories"
+                    className="fillterSeleted"
                     onChange={this.handleFilter}
-                    fullWidth={true}
                 >
                     {categories.map(item => (
                         <MenuItem key={item.id} value={item.id}>
@@ -117,7 +137,9 @@ class Rooms extends Component {
                         </MenuItem>
                     ))}
                 </TextField>
-
+                <div style={{width:'1.5em'}}></div>
+                <Button className="btnReset"  variant="contained" color="secondary" onClick={this.handleReset}>Reset</Button>
+                </div>
                 < div className="booking_list" style={booking_list} >
                     <div className="row">
                         <div className="col">

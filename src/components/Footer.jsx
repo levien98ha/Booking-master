@@ -15,14 +15,14 @@ class Footer extends Component{
                        <li><div className="li_contact"><div className="title_contact">Address: </div><div className="section_decription"> 9863 - 9867 Mill Road,Cambridge, MG09 99HT</div></div></li><br/>
                        <li><div className="li_contact"><div className="title_contact">Phone: </div><div className="section_decription"> (+84) 0345 920 977</div></div></li><br/>
                        <li><div className="li_contact"><div className="title_contact">Fax: </div><div className="section_decription"> +1 800 889 9898</div></div></li><br/>
-                       <li><div className="li_contact"><div className="title_contact">Email: </div><a className="section_decription mail"> footerbooking@booking.com</a></div></li><br/>
+                       <li><div className="li_contact"><div className="title_contact">Email: </div><a className="section_decription mail"> neo-group@real-estate.com</a></div></li><br/>
                    </ul>
                 </section>
                 <section className="section_main_menu">
                    <h4 className="title">Main Menu</h4>
                    <ul className="section_ul">
                        <Link to="/" className="link_menu menu1">HOME</Link><br/><br/>
-                       <Link to="/rooms" className="link_menu menu2">BOOK NOW</Link><br/><br/>
+                       <Link to="/rooms" className="link_menu menu2">HOUSE</Link><br/><br/>
                        <Link to="/" className="link_menu menu3">ABOUT</Link><br/><br/>
                        <Link to="/" className="link_menu menu4">CONTACT</Link><br/><br/>
                    </ul>

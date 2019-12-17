@@ -81,6 +81,10 @@ p {
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
+pre {
+    white-space: pre;
+}
+
 .picon {
     color: gray;
 }
@@ -564,68 +568,6 @@ div {
     align-items: center;
     justify-content: center;
 }
-
-
-/* .slideShow {
-    position: relative;
-} */
-
-
-/* .slideShowImage {
-    position: absolute;
-} */
-
-
-/* 
-slider>* {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 800px;
-    background: #1f1f1f;
-    animation: slide 12s infinite;
-    overflow: hidden;
-}
-
-.heroSlide:nth-child(1) {
-    left: 0%;
-    animation-delay: -1s;
-    background-image: url("./images/4.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.heroSlide:nth-child(2) {
-    animation-delay: 2s;
-    background-image: url("./images/2.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.heroSlide:nth-child(3) {
-    animation-delay: 5s;
-    background-image: url("./images/3.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.heroSlide:nth-child(4) {
-    left: 0%;
-    animation-delay: 8s;
-    background-image: url("./images/1.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.heroSlide p {
-    font-family: Comfortaa;
-    font-size: 70px;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    margin-top: 20px;
-    color: #fff;
-} */
 
 @keyframes slide {
     0% {
@@ -1398,6 +1340,94 @@ textarea {
     background: #8e7757;
 }
 
+.detailsShowHouse {
+    width: 75em;
+    height: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.detailsShowItem {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75em;
+}
+
+.infoItemHouse {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8em;
+    font-size: 1em;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 75em;
+}
+
+.infoItemShowAddress {
+    color: #999999;
+    display: inline;
+    margin-left: 2em;
+    font-family: Verdana, Helvetica, sans-serif !important;
+}
+
+.infoItemShowPrice {
+    color: #999999;
+}
+
+.infoItemShowDecription {
+    color: #999999;
+    font-family: Verdana, Helvetica, sans-serif !important;
+    line-height: 2.5em;
+}
+
+.infoSpan {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 1.2em;
+    color: var(--primaryColor1);
+}
+
+.infoItemDecription1 {
+    display: flex;
+    margin-top: 1em;
+}
+
+.singleHouse {
+    display: flex;
+    width: 110em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.listRecommendHouse {
+    margin-left: 8em;
+    width: 25em;
+}
+
+.recommendImgHouse {
+    width: 12em;
+    height: 12em;
+}
+
+.recommendBlogHouse {
+    display: flex;
+    width: 24em;
+    margin: 2rem;
+    text-align: left;
+    justify-content: left;
+    cursor: pointer;
+}
+
+.recommendBlogHouse:hover {
+    color: var(--primaryColor);
+    background: var(--primaryColor1);
+}
+
 
 /* Pagination */
 
@@ -1598,4 +1628,195 @@ textarea {
 .blog_title:hover {
     color: var(--primaryColor);
     background: var(--primaryColor1);
+}
+
+
+/* blog details */
+
+.blogDetailsBlog {
+    font-family: "Rubik", Arial, sans-serif;
+    width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blogDetailsImg {
+    height: 40em;
+    width: 60em;
+}
+
+.blogDetailsTitle {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1.2rem;
+    color: black;
+}
+
+.blogDetailsDate {
+    color: var(--primaryColor1);
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+.blogDetailsPrap {
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+}
+
+.singleBlog {
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listRecommend {
+    display: inline;
+    text-align: left;
+    justify-content: left;
+    margin-right: 4em;
+}
+
+.recommendBlog {
+    display: flex;
+    width: 20em;
+    margin: 2rem;
+    text-align: left;
+    justify-content: left;
+    cursor: pointer;
+}
+
+.recommendImg {
+    height: 10em;
+    width: 8em;
+}
+
+.recommendInfo {
+    margin-left: 1rem;
+}
+
+.recommendDate {
+    margin-top: 1rem;
+}
+
+.recommendTitle {
+    width: 10em;
+    font-weight: bold;
+}
+
+.recommendBlog:hover {
+    color: var(--primaryColor);
+    background: var(--primaryColor1);
+}
+
+
+/* About */
+
+.aboutTilte {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--primaryColor1);
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.infoAbout {
+    display: flex;
+    margin-bottom: 3em;
+    font-family: "Rubik", Arial, sans-serif;
+}
+
+.aboutDecription {
+    width: 50em;
+    margin-right: 10em;
+    justify-content: left;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    color: #999999;
+    font-weight: 300;
+}
+
+.playVideo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutText {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-bottom: 10em;
+    margin-top: 5em;
+}
+
+.aboutItem {
+    width: 27em;
+    height: 15em;
+    text-align: left;
+    margin: 1rem;
+    background: var(--primaryColor1);
+}
+
+.aboutTilte1 {
+    text-align: left;
+    background: var(--primaryColor);
+    color: var(--primaryColor1);
+}
+
+.aboutSay {
+    width: 20em;
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+
+
+/* Contact */
+
+.contactContainer {
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.ggMap {
+    margin-left: 15em;
+}
+
+.contactInfo {
+    margin-left: 10em;
+    font-size: 1rem;
+}
+
+.contactItem {
+    margin-bottom: 4em;
+}
+
+.contactInfo .Name {
+    color: var(--primaryColor1);
+    font-weight: bold;
+}
+
+
+/* Fillter */
+
+.search {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.fillterSeleted {
+    width: 30em;
+    margin-right: 1em;
+}
+
+.btnReset {
+    margin-left: 1em;
 }

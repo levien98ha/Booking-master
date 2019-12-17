@@ -1,50 +1,20 @@
 import React, { Component } from 'react';
-import { useState } from 'react'
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-
 import axios from 'axios';
-import {connect} from 'react-redux'
+import Carousel from "react-multi-carousel";
+import { FaMapMarkedAlt } from "react-icons/fa";
+  const style = {
+      margin: "10em"
+  }
 
-
-const blockDiv = {
-    width: '2rem'
-}
-const style1 = {
-    width: '20em'
-}
-const style2 = {
-    width: '20em'
-}
-const style3 = {
-    width: '20em'
-}
-const style4 = {
-    width: '20em'
-}
 class Details extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            product:[],
+            productRooms:[],
             id: this.props.id,
-            startDate:'',
-            endDate: ''
         }
         console.log(this.state.id);
     }
-    // onChangeStartDays = (date) => {
-    //     this.setState({
-    //         startDate: date
-    //     })
-    //     console.log(this.state.startDate)
-    // }
-    // onChangeEndDays = (date) => {
-    //     this.setState({
-    //         endDate: date
-    //     })
-    //     console.log(this.state.endDate)
-    // }
     componentDidMount() {
         const id = this.state.id
         axios({
@@ -53,7 +23,7 @@ class Details extends Component {
         })
             .then(response => {
                 this.setState({
-                    product: response.data
+                    productRooms: response.data                 
                 })
                 console.log(this.state.product)
             })
@@ -62,50 +32,96 @@ class Details extends Component {
         })   
         console.log(this.props.id);
     }
-   
 
     render() {
-        const {product} = this.state
-        var list = product.map(item => {
-            return (
-                <div className="details">
-                <h2 className="title_details">{item.name}</h2>
-                <div className="dateOfRoom">
-                    {/* <img className="imgDetails" src={this.state.image}></img> */}
-                    <slider className='imgDetails'>
-                        <slide className= 'slideDetails' style={style1}> </slide>
-                        <slide className= 'slideDetails' style={style2}> </slide>
-                        <slide className= 'slideDetails' style={style3}> </slide>
-                        <slide className= 'slideDetails' style={style4}> </slide>
-                    </slider>
-                    <div className="informations">
-                        <ul className="info_details">
-                            <li className="info_details_list price">Price: <div className="infomation_details">{item.price}</div></li>
-                            <li className="info_details_list decription">Decription: <div className="infomation_details">{item.description}</div></li>
-                        </ul>
+        const a = [];
+        var slideImgae = this.state.productRooms.map((item) => 
+          {return a.push.apply(a,item.imagesURL)}
+            )
+        console.log(a.length)
+        
+        var list = a.map((idImg) => (
+            <img className="detailsShowItem" src={idImg}></img>
+        ))
 
+        var infoHouse = this.state.productRooms.map((infoItem) => {
+            return(
+                <div className="infoItemHouse">
+                    <h2 className="infoItemName">{infoItem.name}</h2>
+                    <div className="infoItemAddress">
+                        <FaMapMarkedAlt size="35px"></FaMapMarkedAlt>
+                        <p className="infoItemShowAddress">{infoItem.address}</p>
+                    </div>
+                    <div className="infoItemDecription">
+                        <div className="infoItemDecription1">
+                            <span className="infoSpan">PRICE:</span> 
+                            <p className="infoItemShowPrice">{infoItem.price}</p> 
+                        </div>
+                        <div className="infoItemDecription2">
+                            <span className="infoSpan">INFORMATION:</span> 
+                            <p className="infoItemShowDecription">{infoItem.description}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            );
+            )
         })
+        
         return (
             <>
-            { list }
+            <div>
+            <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlay
+            autoPlaySpeed={2000}
+            centerMode={false}
+            className="detailsShowHouse"
+            containerClass="container"
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+                desktop: {
+                breakpoint: {
+                    max: 3000,
+                    min: 1024
+                },
+                items: 1
+                },
+                mobile: {
+                breakpoint: {
+                    max: 464,
+                    min: 0
+                },
+                items: 1
+                },
+                tablet: {
+                breakpoint: {
+                    max: 1024,
+                    min: 464
+                },
+                items: 1
+                }
+            }}
+            showDots
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+            >
+                    {list}
+        </Carousel>
+        <button className="addToCart">Buy Now</button>
+        {infoHouse}
+        </div>
             </>
         );
-    }
-
-    // onAddBooking = () => {
-    //   console.log(this.state.startDate);
-    //    }       
+    }      
 };
-// const dataBooking = [];
-
-
-// const mapStateToPros = (state) => {
-//     const {posts} = state;
-//     return {posts}
-// }
 
 export default Details;
