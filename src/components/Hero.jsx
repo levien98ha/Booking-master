@@ -24,6 +24,7 @@ export default function Hero(props) {
         arrows: true
       }
        
+      console.log(images)
       const Slideshow = () => {
           return (
             <div className="slide-container">

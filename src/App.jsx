@@ -11,7 +11,7 @@ import About from './pages/About';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 // import { connect } from 'react-redux';
-import Contact from './components/Contact';
+import Contact from './pages/Contact'
 import Test from './pages/Test'
 import Blog from './pages/Blog'
 import SingleBlog from './pages/SingleBlog'

@@ -70,66 +70,84 @@
             "name": "Apartment Blue",
             "categoryId": 1,
             "price": "$100",
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
-            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Ff862cf15-0b08-4697-add2-93e0d945f340.jpg?alt=media&token=3fe20dd8-a70e-4189-a956-831988ce2f5b",
+            "description": "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.",
+            "imagesURL": ["https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Ff862cf15-0b08-4697-add2-93e0d945f340.jpg?alt=media&token=3fe20dd8-a70e-4189-a956-831988ce2f5b",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fapartment-architecture-carpet-chair-276583.jpg?alt=media&token=8209e66b-08ab-48fa-8f3f-e8f76b5d07dc",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fapartment-architecture-ceiling-chair-259962.jpg?alt=media&token=8c1ad5d6-d825-45b1-9c69-c4d425ca5bce"
+            ],
             "bookingStart": "10-10-2019",
             "bookingEnd": "15-10-2019",
-            "userId": 1
+            "address": "291 South 21th Street, Suite 721 New York NY 10016"
         },
         {
             "id": 2,
             "price": "$123",
             "name": "Rose Villa",
             "categoryId": 3,
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
-            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fhome-real-estate-106399.jpg?alt=media&token=405fffaa-5722-40cf-ad75-65e2ed0b79f1",
+            "description": "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.",
+            "imagesURL": ["https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fhome-real-estate-106399.jpg?alt=media&token=405fffaa-5722-40cf-ad75-65e2ed0b79f1",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fapartment-architecture-chairs-comfort-269218.jpg?alt=media&token=50bcb5f4-1ba4-439f-bc3a-2385e6929f5c",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fbedroom-area-with-no-people-inside-building-2082087.jpg?alt=media&token=b1207cd1-9c3e-4357-8a3c-a0f9897e3d07"
+            ],
             "bookingStart": "10-10-2019",
             "bookingEnd": "15-10-2019",
-            "userId": 1
+            "address": "291 South 21th Street, Suite 721 New York NY 10016"
         },
         {
             "id": 3,
             "price": "$500",
             "name": "Smart house",
             "categoryId": 2,
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
-            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-and-brown-concrete-building-2287310.jpg?alt=media&token=633b49e6-a0df-49df-99b6-07ffc0e8a319",
+            "description": "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.",
+            "imagesURL": ["https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-and-brown-concrete-building-2287310.jpg?alt=media&token=633b49e6-a0df-49df-99b6-07ffc0e8a319",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fkitchen-and-dining-area-1080721.jpg?alt=media&token=9759191b-f2ca-44a1-aed0-ac084442b091",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-framed-2-pane-door-closed-1267857.jpg?alt=media&token=c4fbc95e-226b-4246-bb6e-acaed0e2a86a"
+            ],
             "bookingStart": "10-10-2019",
             "bookingEnd": "15-10-2019",
-            "userId": 1
+            "address": "291 South 21th Street, Suite 721 New York NY 10016"
         },
         {
             "id": 4,
             "name": "TownHouse",
             "categoryId": 5,
             "price": "$1234",
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
-            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-concrete-3-storey-house-206172.jpg?alt=media&token=169402ac-06ab-4c54-bddc-38a857f13594",
+            "description": "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.",
+            "imagesURL": ["https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fwhite-concrete-3-storey-house-206172.jpg?alt=media&token=169402ac-06ab-4c54-bddc-38a857f13594",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Farchitecture-bed-bedroom-ceiling-271743.jpg?alt=media&token=5b4cadd9-925d-44a4-9f10-b71d6552222d",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fapartment-architecture-chairs-comfort-269218.jpg?alt=media&token=50bcb5f4-1ba4-439f-bc3a-2385e6929f5c"
+            ],
             "bookingStart": "10-10-2019",
             "bookingEnd": "15-10-2019",
-            "userId": 1
+            "address": "291 South 21th Street, Suite 721 New York NY 10016"
         },
         {
             "id": 5,
             "name": "House DaNa",
             "categoryId": 1,
             "price": "$5000",
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
-            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fbrown-and-white-wooden-house-164558.jpg?alt=media&token=5deab6b1-eaa8-4904-826c-fa43bfde8dd6",
+            "description": "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.",
+            "imagesURL": ["https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fbrown-and-white-wooden-house-164558.jpg?alt=media&token=5deab6b1-eaa8-4904-826c-fa43bfde8dd6",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fflat-screen-tv-1571458.jpg?alt=media&token=4f12d346-ae75-46b8-8c68-3d6880e48b61",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fturned-on-gray-flat-screen-smart-tv-1571459.jpg?alt=media&token=128777fb-daf9-4d09-8c49-2c73a97ef0cc"
+            ],
             "bookingStart": "10-10-2019",
             "bookingEnd": "15-10-2019",
-            "userId": 1
+            "address": "291 South 21th Street, Suite 721 New York NY 10016"
         },
         {
             "id": 6,
             "name": "Mint Villa",
             "categoryId": 3,
             "price": "$690",
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin velit sed leo ",
-            "imagesURL": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fmodern-building-against-blue-sky-323776.jpg?alt=media&token=9d09ef2a-5530-448a-b754-e73c76e4587d",
+            "description": "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.",
+            "imagesURL": ["https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fmodern-building-against-blue-sky-323776.jpg?alt=media&token=9d09ef2a-5530-448a-b754-e73c76e4587d",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Fthree-gray-ornaments-on-white-wooden-desk-inside-living-room-1571470.jpg?alt=media&token=b2d4067a-bbb9-4885-a7a4-e66f2d2c8646",
+                "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/images%2Finterior-design-1648771.jpg?alt=media&token=eacf2a17-e7e6-407f-82bb-7ac370c0edc3"
+            ],
             "bookingStart": "10-10-2019",
             "bookingEnd": "15-10-2019",
-            "userId": 1
+            "address": "291 South 21th Street, Suite 721 New York NY 10016"
         }
     ],
     "categories": [{
@@ -189,7 +207,7 @@
             "date": "Decemer 15, 2019",
             "title": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
             "imageBlog": "https://firebasestorage.googleapis.com/v0/b/realestate-ee283.appspot.com/o/blogs%2Fimage_2.jpg?alt=media&token=7e860e81-0a27-48eb-935e-dcd5a52ea06b",
-            "decription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.\nMolestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt!Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit.Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!"
+            "decription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.\n\nMolestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt!Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit.Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!"
         },
         {
             "id": 2,

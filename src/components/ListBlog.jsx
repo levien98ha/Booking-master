@@ -18,7 +18,7 @@ class ListBlog extends Component {
 
     render(){
         return(
-            <Link to={this.state.path}>
+            <Link to={this.state.path} className="blogShow">
             <div className="blog_item" id={this.state.id}>
                 <img className="blog_image" src={this.state.imageBlog}></img>
                 <div className="booking_overlay trans_200"></div>

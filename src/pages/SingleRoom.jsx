@@ -6,45 +6,37 @@ import Footer from '../components/Footer';
 import Search from '../components/SearchBox';
 import Details from '../components/DetailsRoom';
 import axios from 'axios';
+import RecommendRoom from '../components/RecommendRoom'
 
 class SingleRoom extends Component {
     constructor(props){
         super(props);
         this.state = {
-            post: [],
-            id: this.props.id
+            id: this.props.id,
+            category: []
         }
     }
-    
     componentDidMount() {
-        const id = this.state.id
         axios({
             method: 'GET',
-            url: `http://localhost:3000/rooms?id=${id}`,
+            url: `http://localhost:3000/rooms?id=${this.state.id}`,
         })
             .then(response => {
                 this.setState({
-                    post: response.data
+                    category: response.data
                 })
-                console.log(this.state.product)
+                console.log(this.state.category)
             })
             .catch(error => {
                 console.log(error);
-        })   
-        console.log(this.props.id);
-    }
+        })}
 
     render() {
-        // let id = ownProps.match.params.id
-        const postDetails = this.state.post ? (<Details
-            id={this.state.post.id}
-            image={this.state.post.image}
-            name={this.state.post.name}
-            price={this.state.post.price}
-            categories={this.state.post.categories}
-            service={this.state.post.service}
-            decription={this.state.post.decription}
-        />) : (<div>Loading........</div>)
+        var getCategory = this.state.category.map(item => {
+            return(
+                <RecommendRoom id={item.id} IdCategory={item.categoryId} />
+            )
+        })
         return (
             <>
                 <Hero hero="roomsHero">
@@ -55,19 +47,16 @@ class SingleRoom extends Component {
                     </Banner>
                 </Hero>
                 {/* {postDetails} */}
-                <Details id={this.state.id}/>
+                <div className="singleHouse">
+                    <Details id={this.state.id}/>
+                    <div className="listRecommendHouse">
+                        <h2>Recommend House</h2>
+                        {getCategory}
+                    </div>
+                </div>
                 <Footer />
             </>
         );
     }
 }
-// const mapStateToProps = (state, ownProps) => {
-//     let id = ownProps.match.params.id
-//     const posts = this.state.post;
-    
-
-//     return {
-//         post: state.posts.find(post => post.id === id)
-//     }
-// }
 export default SingleRoom;
