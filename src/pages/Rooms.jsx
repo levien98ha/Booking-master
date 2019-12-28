@@ -6,14 +6,11 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Search from '../components/SearchBox';
 import ListRooms from '../components/ListRooms'
-import Pagination from '../components/Pagination';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button'
 import { Route } from 'react-router-dom'
-
-// import firebase from "firebase";
-// import FileUploader from "react-firebase-file-uploader";
+import ReactPaginate from 'react-paginate';
 
 const booking_list = {
     textAlign: 'center',
@@ -28,7 +25,9 @@ class Rooms extends Component {
             listProducts: [],
             categories: [],
             rooms: [],
-            categoryId: ''
+            categoryId: '',
+            totalPage: '',
+            limitItem: 3
         }
     }
     componentDidMount() {
@@ -36,15 +35,27 @@ class Rooms extends Component {
             method: 'GET',
             url: 'http://localhost:3000/rooms',
         })
+        .then(response => {
+            this.setState({
+                totalPage: response.data.length/this.state.limitItem
+            })
+        })
+
+        axios({
+            method: 'GET',
+            url: `http://localhost:3000/rooms?_page=1&_limit=${this.state.limitItem}`,
+        })
             .then(response => {
                 this.setState({
-                    listProducts: response.data
+                    listProducts: response.data              
                 })
                 console.log(this.state.listProducts)
+                console.log("total pages: "+response.data.length)
             })
             .catch(error => {
                 console.log(error);
-        })  
+            })  
+
         axios({
             method: 'GET',
             url: 'http://localhost:3000/categories',
@@ -58,7 +69,26 @@ class Rooms extends Component {
             .catch(error => {
                 console.log(error);
             })
-          
+        }
+        
+    handlePageClick = (data) => {
+        const pageChoose = (data.selected+1);
+        this.setState({
+            listProducts: []
+        })
+        axios({
+            method: 'GET',
+            url: `http://localhost:3000/rooms?_page=${pageChoose}&_limit=${this.state.limitItem}`,
+        })
+        .then(response => {
+            this.setState({
+                listProducts: response.data
+            })
+            console.log("list room new:"+this.state.listProducts[0].id)
+        })
+        .catch(error => {
+            console.log(error);
+    })  
     }
 
     handleFilter = (event) => {
@@ -81,12 +111,31 @@ class Rooms extends Component {
             .catch(error => {
                 console.log(error);
             })
-
     }
     handleReset = () => {
         axios({
             method: 'GET',
-            url: 'http://localhost:3000/rooms',
+            url: `http://localhost:3000/rooms?_page=1&_limit=${this.state.limitItem}`,
+        })
+            .then(response => {
+                this.setState({
+                    listProducts: response.data,
+                    categoryId: ''
+                })
+                console.log(this.state.listProducts)
+                
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+    }
+
+    handleSearch = (event) => {
+        let a = event.target.value
+        axios({
+            method: 'GET',
+            url: `http://localhost:3000/rooms?name=${a}`,
         })
             .then(response => {
                 this.setState({
@@ -106,6 +155,7 @@ class Rooms extends Component {
         const showProduct =
         this.state.listProducts.map(item =>
             (
+                <>
                 <ListRooms 
                     id={item.id}
                     price={item.price}
@@ -113,6 +163,7 @@ class Rooms extends Component {
                     categories={item.name}
                     path={item.id}      
                 />
+                </>
             ));
         return (
             <>
@@ -124,6 +175,7 @@ class Rooms extends Component {
                     </Banner>
                 </Hero>
                 <div className="search">
+                    <input type="text"  onChange={this.handleSearch}></input><input type="button" onClick={this.handleSearch}></input>
                 <TextField
                     select
                     value={categoryId}
@@ -155,7 +207,19 @@ class Rooms extends Component {
                         </div>
                     </div>
                 </ div>
-                <Pagination />
+                <ReactPaginate
+                    previousLabel={'<'}
+                    nextLabel={'>'}
+                    breakLabel={'...'}
+                    breakClassName={'break-me'}
+                    pageCount={this.state.totalPage}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={5}
+                    onPageChange={this.handlePageClick}
+                    containerClassName={'pagination'}
+                    subContainerClassName={'pages pagination'}
+                    activeClassName={'active'}
+                />
                 <Footer />
             </>
         )

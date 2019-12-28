@@ -20,7 +20,7 @@ export default class Navbar extends Component {
            <nav className="navbar">
                <div className="nav-center">
                 <div className="nav-header">
-                    <Link to="/">
+                    <Link to="/" className="link-nav-title">
                         <p className="nav-title"> NEO Group. </p>
                     </Link>
                     <button 
