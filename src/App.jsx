@@ -4,7 +4,7 @@ import './App.scss'
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
-import Admin from './pages/Admin';
+import AdminPage from './pages/Admin'
 import SingleRoom from './pages/SingleRoom';
 import Error from './pages/Error';
 import About from './pages/About';
@@ -35,7 +35,7 @@ class App extends Component {
             id={match.params.id}
           />  )}/>
       <Route exact path = "/about-us" component={About}/>
-      <Route exact path = "/admin" component={Admin}/>
+      <Route exact path = "/admin" component={AdminPage}/>
       <Route exact path = "/contact-us" component={Contact}/>
       <Route component={Error}/>
     </Switch>

@@ -1467,101 +1467,96 @@ textarea {
 .break-me {}
 
 
-/* .flex {
-    text-align: center;
-    width: 35vw;
-    height: 4rem;
-    line-height: 4rem;
-    background-color: white;
-    margin: -25px 0 0 -25vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-}
-
-.flex ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
-}
-
-.flex ul li {
-    flex: 1;
-    list-style: none;
-    text-align: center;
-    position: relative;
-    font-size: 20px;
-    font-weight: bold;
-    transition: 0.5s ease;
-    cursor: pointer;
-    user-select: none;
-}
-
-.flex ul li:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: var(--primaryColor);
-}
-
-.flex ul li:hover:nth-of-type(2)~.bar {
-    left: 20%;
-}
-
-.flex ul li:hover:nth-of-type(3)~.bar {
-    left: 40%;
-}
-
-.flex ul li:hover:nth-of-type(4)~.bar {
-    left: 60%;
-}
-
-.flex ul li:hover:nth-of-type(5)~.bar {
-    left: 80%;
-}
-
-.flex ul .bar {
-    width: 20%;
-    background-color: var(--primaryColor);
-    height: 5px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: 0.5s ease;
-} */
-
-
 /* tab admin */
 
-.adminTabPage {
-    margin-top: 4em;
+.tabBar {
+    min-height: 50em;
+    background-color: #F5F6F8;
 }
 
-.tab-list {
-    border-bottom: 0.1em solid #ccc;
-    padding-left: 1rem;
+.admin-page {
+    margin-top: 5em;
+    margin-bottom: 4em;
+    background-color: #F5F6F8;
 }
 
-.tab-list-item {
-    display: inline-block;
-    list-style: none;
-    margin-bottom: -1px;
-    padding: 0.5rem 0.75rem;
+.tab1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-.tab-list-active {
-    background-color: white;
-    border: solid #ccc;
-    border-width: 0.1em 0.1em 0 0.1em;
+.percent {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.delAdmin {
-    margin-right: 1rem;
+.title-chart {
+    color: black !important;
 }
 
-.AdminRooms {
-    margin-left: 0.1em;
-    margin-right: 0.1em;
+.item-count {
+    display: flex;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.user-count,
+.category-count,
+.house-count {
+    margin: 1rem;
+    width: 15em;
+    height: 7em;
+    display: flex;
+}
+
+.user-count {
+    border: solid 2px crimson;
+    border-radius: 5px;
+}
+
+.category-count {
+    border: solid 2px darkorange;
+    border-radius: 5px;
+}
+
+.house-count {
+    border: solid 2px greenyellow;
+    border-radius: 5px;
+}
+
+.icon-count-red,
+.icon-count-yellow,
+.icon-count-green {
+    padding: 1rem;
+    text-align: center;
+}
+
+.count-info {
+    margin: auto;
+}
+
+.count-title,
+.count-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon-count-red {
+    background-color: crimson;
+}
+
+.icon-count-yellow {
+    background-color: darkorange;
+}
+
+.icon-count-green {
+    background-color: greenyellow;
 }
 
 
