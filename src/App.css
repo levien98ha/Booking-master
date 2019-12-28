@@ -35,14 +35,14 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.4em;
     line-height: 1;
     margin-bottom: 0.5em;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.7em;
     margin-bottom: 0.75em;
 }
 
@@ -443,13 +443,17 @@ div {
 .nav-header {
     display: flex;
     justify-content: space-between;
-    margin-right: 25em;
+    margin-right: 22em;
+}
+
+.link-nav-title {
+    text-decoration: none !important;
 }
 
 .nav-title {
     color: var(--offWhite);
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     border: solid var(--offWhite) 0.1rem;
     padding: 0.1rem;
     border-radius: 3px;
@@ -516,30 +520,6 @@ div {
     .nav-links a {
         margin: 0 1rem;
         padding: 0.5rem 0;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-center {
-        max-width: 1170px;
-        margin: 0 auto;
-        display: flex;
-    }
-    .nav-btn {
-        margin-bottom: 0rem;
-        margin-left: 180%;
-    }
-    .nav-links {
-        height: auto;
-        display: flex;
-        margin-left: 4rem;
-    }
-    .nav-links a {
-        margin: 0 1rem;
-        padding: 0.5rem 0;
-    }
-    .nav-title {
-        font-size: 4vw;
     }
 }
 
@@ -1431,7 +1411,63 @@ textarea {
 
 /* Pagination */
 
-.flex {
+.pagination {
+    margin-bottom: 3em;
+    font-size: 1.2em;
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    font-weight: bold;
+}
+
+.pagination ul {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pagination li {
+    display: inline-block;
+    color: var(--primaryColor1);
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.previous {
+    margin-right: 1.5em;
+    color: var(--primaryColor1);
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.next {
+    margin-left: 1.5em;
+    color: var(--primaryColor1);
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+}
+
+.active {
+    background-color: var(--primaryColor1);
+    color: var(--primaryColor) !important;
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.pages {
+    background-color: var(--primaryColor1);
+    color: var(--primaryColor);
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.break-me {}
+
+
+/* .flex {
     text-align: center;
     width: 35vw;
     height: 4rem;
@@ -1492,7 +1528,7 @@ textarea {
     left: 0;
     bottom: 0;
     transition: 0.5s ease;
-}
+} */
 
 
 /* tab admin */
@@ -1591,7 +1627,7 @@ textarea {
 
 .blog_list {
     margin-top: 5em;
-    width: 71%;
+    width: 77%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5em;
@@ -1601,7 +1637,7 @@ textarea {
 .blog_item {
     width: 15vw;
     height: 22vw;
-    margin: 1.5rem;
+    margin: 2rem;
     display: inline-block;
     vertical-align: top;
     margin-bottom: 5rem;
@@ -1622,7 +1658,7 @@ textarea {
 
 .blog_title {
     color: var(--primaryColor1);
-    font-size: 1.3em;
+    font-size: 1.1em !important;
 }
 
 .blog_title:hover {
