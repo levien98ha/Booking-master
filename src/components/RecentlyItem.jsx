@@ -14,7 +14,7 @@ class RecentlyItem extends Component {
     componentDidMount() {
         axios({
             method: 'GET',
-            url: 'http://localhost:3000/rooms',
+            url: 'http://localhost:3000/rooms?limit=4',
         })
             .then(response => {
                 this.setState({
