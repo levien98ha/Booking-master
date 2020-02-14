@@ -1,5 +1,5 @@
 This project about Real Estate using React. 
-
+This is FE Code (ReactJs + Axios API + Json Server)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
