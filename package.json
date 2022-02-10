@@ -10,7 +10,7 @@
         "bootstrap": "^4.3.1",
         "firebase": "^7.5.2",
         "google-maps-react": "^2.0.2",
-        "node-sass": "^4.13.0",
+        "node-sass": "^7.0.0",
         "react": "^16.10.2",
         "react-countup": "^4.2.6",
         "react-datepicker": "^2.9.6",
